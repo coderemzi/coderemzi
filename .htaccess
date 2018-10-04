@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteRule profile-([0-9]+)-(.*)\.html$ profile.php?id=$1&user=$2 [L]
+RewriteRule my_fatcs-([0-9]+)-(.*)-([0-9]+)\.html$ my_fatcs.php?id=$1&name=$2&page=$3 [L]
+RewriteRule category-([0-9]+)-(.*)-([0-9]+)\.html$ category.php?cid=$1&name=$2&page=$3 [L]
+RewriteRule fact-([0-9]+)-(.*)\.html$ fact.php?id=$1&name=$2 [L]
+RewriteRule top-([0-9]+)\.html$ top.php?page=$1 [L]
+RewriteRule index-([0-9]+)\.html$ index.php?page=$1 [L]
+RewriteRule ^(.*)\.html$ $1.php [L]
+
